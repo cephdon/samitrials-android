@@ -12,9 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrialInfo  {
   
   private String description = null;
-  private Long endDate = null;
   private String name = null;
-  private Long startDate = null;
 
   
   /**
@@ -31,19 +29,6 @@ public class TrialInfo  {
 
   
   /**
-   * End date of the Trial (in milliseconds since epoch)
-   **/
-  @ApiModelProperty(required = false, value = "End date of the Trial (in milliseconds since epoch)")
-  @JsonProperty("endDate")
-  public Long getEndDate() {
-    return endDate;
-  }
-  public void setEndDate(Long endDate) {
-    this.endDate = endDate;
-  }
-
-  
-  /**
    * Name of the trial.
    **/
   @ApiModelProperty(required = true, value = "Name of the trial.")
@@ -56,19 +41,6 @@ public class TrialInfo  {
   }
 
   
-  /**
-   * Start date of the Trial (in milliseconds since epoch)
-   **/
-  @ApiModelProperty(required = false, value = "Start date of the Trial (in milliseconds since epoch)")
-  @JsonProperty("startDate")
-  public Long getStartDate() {
-    return startDate;
-  }
-  public void setStartDate(Long startDate) {
-    this.startDate = startDate;
-  }
-
-  
 
   @Override
   public String toString()  {
@@ -76,9 +48,7 @@ public class TrialInfo  {
     sb.append("class TrialInfo {\n");
     
     sb.append("  description: ").append(description).append("\n");
-    sb.append("  endDate: ").append(endDate).append("\n");
     sb.append("  name: ").append(name).append("\n");
-    sb.append("  startDate: ").append(startDate).append("\n");
     sb.append("}\n");
     return sb.toString();
   }
