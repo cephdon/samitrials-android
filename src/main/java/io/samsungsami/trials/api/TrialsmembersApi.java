@@ -127,7 +127,6 @@ public class TrialsmembersApi {
     // create path and map variables
     String path = "/trials/{trialId}/invitations".replaceAll("\\{format\\}","json").replaceAll("\\{" + "trialId" + "\\}", apiInvoker.escapeString(trialId.toString()));
 
-    
     // query params
     Map<String, String> queryParams = new HashMap<String, String>();
     Map<String, String> headerParams = new HashMap<String, String>();
@@ -138,6 +137,9 @@ public class TrialsmembersApi {
       queryParams.put("count", String.valueOf(count));
     if(!"null".equals(String.valueOf(offset)))
       queryParams.put("offset", String.valueOf(offset));
+    
+
+    
 
     String contentType = "application/json";
 
@@ -160,8 +162,8 @@ public class TrialsmembersApi {
   }
   
   
-  public TrialInvitationEnvelope  createTrialInvitation (String trialId, TrialInvitationInfo body) throws ApiException {
-    Object postBody = body;
+  public TrialInvitationEnvelope  createTrialInvitation (String trialId, TrialInvitationInfo invitationInfo) throws ApiException {
+    Object postBody = invitationInfo;
 
     
 
@@ -197,8 +199,8 @@ public class TrialsmembersApi {
   }
   
   
-  public TrialInvitationEnvelope  updateTrialInvitation (String trialId, String invitationId, TrialInvitationStatusInfo body) throws ApiException {
-    Object postBody = body;
+  public TrialInvitationEnvelope  updateTrialInvitation (String trialId, String invitationId, TrialInvitationStatusInfo invitationInfo) throws ApiException {
+    Object postBody = invitationInfo;
 
     
 
@@ -347,4 +349,5 @@ public class TrialsmembersApi {
       }
     }
   }
+  
 }
