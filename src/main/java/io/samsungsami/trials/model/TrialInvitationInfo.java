@@ -12,16 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrialInvitationInfo  {
   
   private String email = null;
-  public enum InvitationTypeEnum {
-     administrator,  participant, 
-  };
-  private InvitationTypeEnum invitationType = null;
+  private String invitationType = null;
 
   
   /**
    * Email address of the user
    **/
-  @ApiModelProperty(required = true, value = "Email address of the user")
+  @ApiModelProperty(required = false, value = "Email address of the user")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -34,12 +31,12 @@ public class TrialInvitationInfo  {
   /**
    * User role.
    **/
-  @ApiModelProperty(required = true, value = "User role.")
+  @ApiModelProperty(required = false, value = "User role.")
   @JsonProperty("invitationType")
-  public InvitationTypeEnum getInvitationType() {
+  public String getInvitationType() {
     return invitationType;
   }
-  public void setInvitationType(InvitationTypeEnum invitationType) {
+  public void setInvitationType(String invitationType) {
     this.invitationType = invitationType;
   }
 

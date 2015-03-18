@@ -1,8 +1,5 @@
 package io.samsungsami.trials.model;
 
-import io.samsungsami.trials.model.TrialGroupType;
-import java.util.Date;
-import io.samsungsami.trials.model.TrialInvitationStatus;
 
 import com.wordnik.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -14,32 +11,35 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @ApiModel(description = "")
 public class TrialInvitation  {
   
-  private Date acceptedDate = null;
+  private Long acceptedDate = null;
   private String email = null;
-  private Date expirationDate = null;
+  private Long expirationDate = null;
   private String id = null;
-  private TrialGroupType invitationType = null;
-  private Date revokedDate = null;
-  private Date sentDate = null;
-  private TrialInvitationStatus status = null;
+  private String invitationType = null;
+  private Long revokedDate = null;
+  private Long sentDate = null;
+  private String status = null;
   private String tid = null;
+  private String userId = null;
 
   
   /**
+   * acceptedDate
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "acceptedDate")
   @JsonProperty("acceptedDate")
-  public Date getAcceptedDate() {
+  public Long getAcceptedDate() {
     return acceptedDate;
   }
-  public void setAcceptedDate(Date acceptedDate) {
+  public void setAcceptedDate(Long acceptedDate) {
     this.acceptedDate = acceptedDate;
   }
 
   
   /**
+   * email
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "email")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -50,20 +50,22 @@ public class TrialInvitation  {
 
   
   /**
+   * expirationDate
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "expirationDate")
   @JsonProperty("expirationDate")
-  public Date getExpirationDate() {
+  public Long getExpirationDate() {
     return expirationDate;
   }
-  public void setExpirationDate(Date expirationDate) {
+  public void setExpirationDate(Long expirationDate) {
     this.expirationDate = expirationDate;
   }
 
   
   /**
+   * id
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "id")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -74,37 +76,40 @@ public class TrialInvitation  {
 
   
   /**
+   * invitationType
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "invitationType")
   @JsonProperty("invitationType")
-  public TrialGroupType getInvitationType() {
+  public String getInvitationType() {
     return invitationType;
   }
-  public void setInvitationType(TrialGroupType invitationType) {
+  public void setInvitationType(String invitationType) {
     this.invitationType = invitationType;
   }
 
   
   /**
+   * revokedDate
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "revokedDate")
   @JsonProperty("revokedDate")
-  public Date getRevokedDate() {
+  public Long getRevokedDate() {
     return revokedDate;
   }
-  public void setRevokedDate(Date revokedDate) {
+  public void setRevokedDate(Long revokedDate) {
     this.revokedDate = revokedDate;
   }
 
   
   /**
+   * sentDate
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "sentDate")
   @JsonProperty("sentDate")
-  public Date getSentDate() {
+  public Long getSentDate() {
     return sentDate;
   }
-  public void setSentDate(Date sentDate) {
+  public void setSentDate(Long sentDate) {
     this.sentDate = sentDate;
   }
 
@@ -113,23 +118,37 @@ public class TrialInvitation  {
    **/
   @ApiModelProperty(required = false, value = "")
   @JsonProperty("status")
-  public TrialInvitationStatus getStatus() {
+  public String getStatus() {
     return status;
   }
-  public void setStatus(TrialInvitationStatus status) {
+  public void setStatus(String status) {
     this.status = status;
   }
 
   
   /**
+   * tid
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "tid")
   @JsonProperty("tid")
   public String getTid() {
     return tid;
   }
   public void setTid(String tid) {
     this.tid = tid;
+  }
+
+  
+  /**
+   * userId
+   **/
+  @ApiModelProperty(required = false, value = "userId")
+  @JsonProperty("userId")
+  public String getUserId() {
+    return userId;
+  }
+  public void setUserId(String userId) {
+    this.userId = userId;
   }
 
   
@@ -148,6 +167,7 @@ public class TrialInvitation  {
     sb.append("  sentDate: ").append(sentDate).append("\n");
     sb.append("  status: ").append(status).append("\n");
     sb.append("  tid: ").append(tid).append("\n");
+    sb.append("  userId: ").append(userId).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

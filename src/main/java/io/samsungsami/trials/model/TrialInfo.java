@@ -18,7 +18,7 @@ public class TrialInfo  {
   /**
    * Description of the trial.
    **/
-  @ApiModelProperty(required = true, value = "Description of the trial.")
+  @ApiModelProperty(required = false, value = "Description of the trial.")
   @JsonProperty("description")
   public String getDescription() {
     return description;
@@ -31,7 +31,7 @@ public class TrialInfo  {
   /**
    * Name of the trial.
    **/
-  @ApiModelProperty(required = true, value = "Name of the trial.")
+  @ApiModelProperty(required = false, value = "Name of the trial.")
   @JsonProperty("name")
   public String getName() {
     return name;

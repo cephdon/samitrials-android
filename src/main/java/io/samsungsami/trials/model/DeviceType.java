@@ -1,46 +1,32 @@
 package io.samsungsami.trials.model;
 
-import io.samsungsami.trials.model.ManifestSourceTypes;
 
 import com.wordnik.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
+/**
+ * 
+ **/
 @ApiModel(description = "")
 public class DeviceType  {
   
-  private String _id = null;
   private Boolean approved = null;
   private String id = null;
-  private Long latestVersion = null;
-  private String manifest = null;
-  private String manifestSource = null;
-  private ManifestSourceTypes manifestSourceType = null;
+  private String issuerDn = null;
+  private Integer latestVersion = null;
   private String name = null;
   private Boolean published = null;
-  private Object requireSecureProtocol = null;
-  private String suerDn = null;
+  private Boolean rsp = null;
+  private String uid = null;
   private String uniqueName = null;
-  private String userId = null;
-  private String vendorId = null;
+  private String vid = null;
 
   
   /**
-   * id
+   * Approval status.
    **/
-  @ApiModelProperty(required = false, value = "id")
-  @JsonProperty("_id")
-  public String get_id() {
-    return _id;
-  }
-  public void set_id(String _id) {
-    this._id = _id;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "Approval status.")
   @JsonProperty("approved")
   public Boolean getApproved() {
     return approved;
@@ -51,8 +37,9 @@ public class DeviceType  {
 
   
   /**
+   * Device Type ID.
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "Device Type ID.")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -65,54 +52,32 @@ public class DeviceType  {
   /**
    **/
   @ApiModelProperty(required = false, value = "")
+  @JsonProperty("issuerDn")
+  public String getIssuerDn() {
+    return issuerDn;
+  }
+  public void setIssuerDn(String issuerDn) {
+    this.issuerDn = issuerDn;
+  }
+
+  
+  /**
+   * Latest Manifest version.
+   **/
+  @ApiModelProperty(required = false, value = "Latest Manifest version.")
   @JsonProperty("latestVersion")
-  public Long getLatestVersion() {
+  public Integer getLatestVersion() {
     return latestVersion;
   }
-  public void setLatestVersion(Long latestVersion) {
+  public void setLatestVersion(Integer latestVersion) {
     this.latestVersion = latestVersion;
   }
 
   
   /**
+   * Name.
    **/
-  @ApiModelProperty(required = false, value = "")
-  @JsonProperty("manifest")
-  public String getManifest() {
-    return manifest;
-  }
-  public void setManifest(String manifest) {
-    this.manifest = manifest;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(required = false, value = "")
-  @JsonProperty("manifestSource")
-  public String getManifestSource() {
-    return manifestSource;
-  }
-  public void setManifestSource(String manifestSource) {
-    this.manifestSource = manifestSource;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(required = false, value = "")
-  @JsonProperty("manifestSourceType")
-  public ManifestSourceTypes getManifestSourceType() {
-    return manifestSourceType;
-  }
-  public void setManifestSourceType(ManifestSourceTypes manifestSourceType) {
-    this.manifestSourceType = manifestSourceType;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "Name.")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -123,8 +88,9 @@ public class DeviceType  {
 
   
   /**
+   * Published status.
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "Published status.")
   @JsonProperty("published")
   public Boolean getPublished() {
     return published;
@@ -135,32 +101,35 @@ public class DeviceType  {
 
   
   /**
+   * Require Secure Protocol.
    **/
-  @ApiModelProperty(required = false, value = "")
-  @JsonProperty("requireSecureProtocol")
-  public Object getRequireSecureProtocol() {
-    return requireSecureProtocol;
+  @ApiModelProperty(required = false, value = "Require Secure Protocol.")
+  @JsonProperty("rsp")
+  public Boolean getRsp() {
+    return rsp;
   }
-  public void setRequireSecureProtocol(Object requireSecureProtocol) {
-    this.requireSecureProtocol = requireSecureProtocol;
+  public void setRsp(Boolean rsp) {
+    this.rsp = rsp;
   }
 
   
   /**
+   * User ID.
    **/
-  @ApiModelProperty(required = false, value = "")
-  @JsonProperty("suerDn")
-  public String getSuerDn() {
-    return suerDn;
+  @ApiModelProperty(required = false, value = "User ID.")
+  @JsonProperty("uid")
+  public String getUid() {
+    return uid;
   }
-  public void setSuerDn(String suerDn) {
-    this.suerDn = suerDn;
+  public void setUid(String uid) {
+    this.uid = uid;
   }
 
   
   /**
+   * Unique Name.
    **/
-  @ApiModelProperty(required = false, value = "")
+  @ApiModelProperty(required = false, value = "Unique Name.")
   @JsonProperty("uniqueName")
   public String getUniqueName() {
     return uniqueName;
@@ -171,26 +140,15 @@ public class DeviceType  {
 
   
   /**
+   * Vendor ID.
    **/
-  @ApiModelProperty(required = false, value = "")
-  @JsonProperty("userId")
-  public String getUserId() {
-    return userId;
+  @ApiModelProperty(required = false, value = "Vendor ID.")
+  @JsonProperty("vid")
+  public String getVid() {
+    return vid;
   }
-  public void setUserId(String userId) {
-    this.userId = userId;
-  }
-
-  
-  /**
-   **/
-  @ApiModelProperty(required = false, value = "")
-  @JsonProperty("vendorId")
-  public String getVendorId() {
-    return vendorId;
-  }
-  public void setVendorId(String vendorId) {
-    this.vendorId = vendorId;
+  public void setVid(String vid) {
+    this.vid = vid;
   }
 
   
@@ -200,20 +158,16 @@ public class DeviceType  {
     StringBuilder sb = new StringBuilder();
     sb.append("class DeviceType {\n");
     
-    sb.append("  _id: ").append(_id).append("\n");
     sb.append("  approved: ").append(approved).append("\n");
     sb.append("  id: ").append(id).append("\n");
+    sb.append("  issuerDn: ").append(issuerDn).append("\n");
     sb.append("  latestVersion: ").append(latestVersion).append("\n");
-    sb.append("  manifest: ").append(manifest).append("\n");
-    sb.append("  manifestSource: ").append(manifestSource).append("\n");
-    sb.append("  manifestSourceType: ").append(manifestSourceType).append("\n");
     sb.append("  name: ").append(name).append("\n");
     sb.append("  published: ").append(published).append("\n");
-    sb.append("  requireSecureProtocol: ").append(requireSecureProtocol).append("\n");
-    sb.append("  suerDn: ").append(suerDn).append("\n");
+    sb.append("  rsp: ").append(rsp).append("\n");
+    sb.append("  uid: ").append(uid).append("\n");
     sb.append("  uniqueName: ").append(uniqueName).append("\n");
-    sb.append("  userId: ").append(userId).append("\n");
-    sb.append("  vendorId: ").append(vendorId).append("\n");
+    sb.append("  vid: ").append(vid).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

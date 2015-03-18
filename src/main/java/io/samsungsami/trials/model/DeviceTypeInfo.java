@@ -17,7 +17,7 @@ public class DeviceTypeInfo  {
   /**
    * Device Type ID.
    **/
-  @ApiModelProperty(required = true, value = "Device Type ID.")
+  @ApiModelProperty(required = false, value = "Device Type ID.")
   @JsonProperty("dtid")
   public String getDtid() {
     return dtid;

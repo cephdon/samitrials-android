@@ -5,6 +5,9 @@ import com.wordnik.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
+/**
+ * 
+ **/
 @ApiModel(description = "")
 public class TrialParticipant  {
   

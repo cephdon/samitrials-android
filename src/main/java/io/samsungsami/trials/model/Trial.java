@@ -1,6 +1,5 @@
 package io.samsungsami.trials.model;
 
-import java.util.Date;
 
 import com.wordnik.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -12,12 +11,38 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @ApiModel(description = "")
 public class Trial  {
   
+  private String aid = null;
+  private String clientSecret = null;
   private String description = null;
-  private Date endDate = null;
+  private Long endDate = null;
   private String id = null;
   private String name = null;
   private String ownerId = null;
-  private Date startDate = null;
+  private Long startDate = null;
+
+  
+  /**
+   **/
+  @ApiModelProperty(required = false, value = "")
+  @JsonProperty("aid")
+  public String getAid() {
+    return aid;
+  }
+  public void setAid(String aid) {
+    this.aid = aid;
+  }
+
+  
+  /**
+   **/
+  @ApiModelProperty(required = false, value = "")
+  @JsonProperty("clientSecret")
+  public String getClientSecret() {
+    return clientSecret;
+  }
+  public void setClientSecret(String clientSecret) {
+    this.clientSecret = clientSecret;
+  }
 
   
   /**
@@ -36,10 +61,10 @@ public class Trial  {
    **/
   @ApiModelProperty(required = false, value = "")
   @JsonProperty("endDate")
-  public Date getEndDate() {
+  public Long getEndDate() {
     return endDate;
   }
-  public void setEndDate(Date endDate) {
+  public void setEndDate(Long endDate) {
     this.endDate = endDate;
   }
 
@@ -84,10 +109,10 @@ public class Trial  {
    **/
   @ApiModelProperty(required = false, value = "")
   @JsonProperty("startDate")
-  public Date getStartDate() {
+  public Long getStartDate() {
     return startDate;
   }
-  public void setStartDate(Date startDate) {
+  public void setStartDate(Long startDate) {
     this.startDate = startDate;
   }
 
@@ -98,6 +123,8 @@ public class Trial  {
     StringBuilder sb = new StringBuilder();
     sb.append("class Trial {\n");
     
+    sb.append("  aid: ").append(aid).append("\n");
+    sb.append("  clientSecret: ").append(clientSecret).append("\n");
     sb.append("  description: ").append(description).append("\n");
     sb.append("  endDate: ").append(endDate).append("\n");
     sb.append("  id: ").append(id).append("\n");

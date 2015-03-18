@@ -17,7 +17,7 @@ public class DeviceInfo  {
   /**
    * Device ID.
    **/
-  @ApiModelProperty(required = true, value = "Device ID.")
+  @ApiModelProperty(required = false, value = "Device ID.")
   @JsonProperty("did")
   public String getDid() {
     return did;

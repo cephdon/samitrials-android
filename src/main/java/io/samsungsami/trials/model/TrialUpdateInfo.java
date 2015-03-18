@@ -1,6 +1,5 @@
 package io.samsungsami.trials.model;
 
-import io.samsungsami.trials.model.TrialStatus;
 
 import com.wordnik.swagger.annotations.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -14,13 +13,13 @@ public class TrialUpdateInfo  {
   
   private String description = null;
   private String name = null;
-  private TrialStatus status = null;
+  private String status = null;
 
   
   /**
    * Description of the trial.
    **/
-  @ApiModelProperty(required = true, value = "Description of the trial.")
+  @ApiModelProperty(required = false, value = "Description of the trial.")
   @JsonProperty("description")
   public String getDescription() {
     return description;
@@ -33,7 +32,7 @@ public class TrialUpdateInfo  {
   /**
    * Name of the trial.
    **/
-  @ApiModelProperty(required = true, value = "Name of the trial.")
+  @ApiModelProperty(required = false, value = "Name of the trial.")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -48,10 +47,10 @@ public class TrialUpdateInfo  {
    **/
   @ApiModelProperty(required = false, value = "Status.")
   @JsonProperty("status")
-  public TrialStatus getStatus() {
+  public String getStatus() {
     return status;
   }
-  public void setStatus(TrialStatus status) {
+  public void setStatus(String status) {
     this.status = status;
   }
 
