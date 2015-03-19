@@ -1,5 +1,5 @@
-SAMI TrialsAndroid SDK
-======================
+SAMI Trials Android SDK
+=======================
 
 This SDK helps you connect your Android apps to SAMI Trials. The SDK exposes a number of methods to easily execute REST API calls to SAMI Trials. 
 
@@ -15,7 +15,7 @@ Prerequisites
  
 The SDK was developed with Eclipse and Maven and tested with Android 4.4.2. When building Maven will fetch the correct libraries. You might be able to build the SDK in a different environment and we would be happy to hear about your (success) stories.
 
-If you need to exercise core SAMI functionality, then you need to import the [sami-android SDK](https://github.com/samsungsamiio/sami-android) as well. 
+If you need to exercise core SAMI functionality, then you need to import the [sami-android](https://github.com/samsungsamiio/sami-android) SDK as well. 
 
 Installation
 ---------------------
