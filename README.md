@@ -27,7 +27,7 @@ In Eclipse,
 After the installation succeeds, you can use the generated libraries in one of the following ways depending on your scenario:
 
 - To use them in an Android project, copy libraries under `target` and `target/lib` directories of the imported Maven project to `libs` directory in your Android project.
-- To use them in your Maven project, modify `pom.xml` file in your project to add dependency to sami-android-xxx.jar under `target` of the imported Maven project as following
+- To use them in your Maven project, modify `pom.xml` file in your project to add dependency to samitrials-android-xxx.jar under `target` of the imported Maven project as following
 
 ~~~
 <dependency>
@@ -52,11 +52,13 @@ If you are not familiar with SAMI we have extensive documentation at http://deve
 
 The full SAMI API specification with examples can be found at http://developer.samsungsami.io/sami/api-spec.html
 
+We blog about advanced sample applications at http://blog.samsungsami.io/
+
 To create and manage your services and devices on SAMI visit developer portal at http://devportal.samsungsami.io
 
-Licence and Copyright
+License and Copyright
 ---------------------
 
-Licensed under the Apache License. See LICENCE.
+Licensed under the Apache License. See LICENSE.
 
-Copyright (c) 2014 Samsung Electronics Co., Ltd.
+Copyright (c) 2015 Samsung Electronics Co., Ltd.
